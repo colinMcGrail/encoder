@@ -1,0 +1,21 @@
+Make encoding work per-word instead of per-character. hopefully that will make it able to encode and decode all file types. I suspect issues with non-text files come down to not being divisible by sizeof(char).
+	- per word encoding probably is easier to crack, since ASCII only uses 128 out of 256 possible values, and the alphabet only takes up 52 of those-- need more entropy. Hashing???
+	-per bit encoding??? probably too much.
+
+Find out if this actually prevents data recovery.
+	
+Input sanitization and validity checks
+
+ensure overflows/underflows work as expected without explicit modulo
+	-maybe put explicit modulo in anyway, just to be sure
+		-make sure modulo arithmetic works as expected with respect to overflows/underflows
+			-fuck
+
+Far future:
+
+figure out makefiles to turn this into a single program
+
+GUI???
+
+Put this shit on github
+
